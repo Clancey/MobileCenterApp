@@ -30,10 +30,12 @@ namespace MobileCenterApp.Data
 			}
 		}
 		public static string BaseDir = ContainerDirectory;
+#elif WINDOWS_UWP
+		public static string BaseDir = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 #else
 		public static string BaseDir = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.Personal)).ToString();
 #endif
-		
+
 
 		public static readonly string LibDir = Path.Combine(BaseDir, "Library/");
 		public static readonly string DocumentsDir = Path.Combine(BaseDir, "Documents/");

@@ -194,6 +194,12 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MobileCenterApp.Resources\MobileCenterApp.Resources.csproj">
+      <Project>{d147a6dd-c8af-4835-9bda-a68d38acc54b}</Project>
+      <Name>MobileCenterApp.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

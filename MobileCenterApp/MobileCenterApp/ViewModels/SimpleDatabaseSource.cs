@@ -108,7 +108,12 @@ namespace MobileCenterApp
 
 		public IEnumerator GetEnumerator()
 		{
-			throw new NotImplementedException();
+			int position = -1;
+			while (position < Count - 1)
+			{
+				position++;
+				yield return this[position];
+			}
 		}
 
 		public int IndexOf(object value)
@@ -250,7 +255,13 @@ namespace MobileCenterApp
 
 		public IEnumerator GetEnumerator()
 		{
-			throw new NotImplementedException();
+			int position = -1;
+			var count = Count;
+			while (position < count - 1)
+			{
+				position++;
+				yield return this[position];
+			}
 		}
 	}
 }
