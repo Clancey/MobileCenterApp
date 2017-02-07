@@ -44,31 +44,13 @@ namespace MobileCenterApp
 			}
 		}
 
-		public int Count
-		{
-			get
-			{
-				return Database?.NumberOfSections<T>(GroupInfo) ?? 0;
-			}
-		}
+		public int Count => Database?.NumberOfSections<T>(GroupInfo) ?? 0;
 
 		public SimpleDatabase.SimpleDatabaseConnection Database { get; set; }
 
-		public bool IsFixedSize
-		{
-			get
-			{
-				return true;
-			}
-		}
+		public bool IsFixedSize => true;
 
-		public bool IsReadOnly
-		{
-			get
-			{
-				return true;
-			}
-		}
+		public bool IsReadOnly => true;
 
 		public bool IsSynchronized
 		{
@@ -147,41 +129,16 @@ namespace MobileCenterApp
 			Section = section;
 		}
 		public GroupInfo GroupInfo { get; set; }
-		string display = "";
-		public string Display { 
-			get
-			{
-				return display;
-			}
-			set { display = value; }
-		}
+		public string Display { get; set; } = "";
 
 		public SimpleDatabase.SimpleDatabaseConnection Database { get; set; }
 		public int Section { get; set; }
 
-		public bool IsReadOnly
-		{
-			get
-			{
-				return true;
-			}
-		}
+		public bool IsReadOnly => true;
 
-		public bool IsFixedSize
-		{
-			get
-			{
-				return true;
-			}
-		}
+		public bool IsFixedSize => true;
 
-		public int Count
-		{
-			get
-			{
-				return Database?.RowsInSection<T>(GroupInfo,Section) ?? 0;
-			}
-		}
+		public int Count => Database?.RowsInSection<T>(GroupInfo,Section) ?? 0;
 
 		public object SyncRoot
 		{
